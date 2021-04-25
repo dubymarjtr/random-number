@@ -1,5 +1,115 @@
+:root {
+  --medium-gap: 8px;
+  --primary-color: #9a6f80;
+  --input-color: #eee2e7;
+  --heading-color: #00c9c2;
+  --button-color: #685c68;
+  --button-reset: #f05f7a;
+  --button-jumbo: #eee2e7;
+  --background-color: #685c68;
+  --border-color: #ded1de;
+  --button-text: #00c9c2;
+  --button-text-reset: black;
+  --placeholder-color: grey;
+  --font-color: black;
+}
+::placeholder {
+  color: var(--placeholder-color);
+  font-family: 'Source Sans Pro', sans-serif;
+  opacity: 1;
+}
+
+p {
+  color: var(--font-color);
+  font-size: 20px;
+  font-weight: bold;
+}
 body {
-  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen,
-    Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
-  font-size: 10px;
+  background-color: var(--background-color);
+  font-family: 'Source Sans Pro', sans-serif;
+}
+
+input {
+  background-color: var(--input-color);
+  opacity: 0.5;
+  padding: 10px 5px;
+}
+
+#color {
+  padding: 2px;
+}
+
+.button {
+  background-color: var(--button-color);
+  border-radius: 5px;
+  color: var(--button-text);
+  padding: 5px;
+}
+
+.button--jumbo {
+  background-color: var(--button-jumbo);
+  color: var(--button-text);
+  font-size: 15px;
+  height: 10vh;
+  margin: 30px 20px;
+  transition-duration: 1s;
+  width: 20vw;
+}
+.button--jumbo:hover {
+  border-radius: 32px;
+  font-weight: bold;
+  transition: all 0.25s;
+}
+
+.button--dark {
+  height: 60px;
+  margin: 30px 20px;
+  padding: 10px;
+  width: 110px;
+}
+
+form {
+  background-color: var(--primary-color);
+  border: 1px var(--border-color) solid;
+  border-radius: 5px;
+  gap: var(--medium-gap);
+  margin: 0 auto;
+  padding: 70px 20px;
+}
+
+h1 {
+  color: var(--heading-color);
+}
+
+.flex {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--medium-gap);
+}
+
+.flex--column {
+  flex-direction: column;
+}
+
+.flex--justify-center {
+  justify-content: center;
+}
+
+.flex--align-center {
+  align-items: center;
+}
+
+.text-center {
+  text-align: center;
+}
+
+.flex--align-end {
+  align-items: flex-end;
+}
+
+/* CSS Tricks */
+.screen-reader-text {
+  left: -9999px;
+  position: absolute;
+  top: -9999px;
 }
